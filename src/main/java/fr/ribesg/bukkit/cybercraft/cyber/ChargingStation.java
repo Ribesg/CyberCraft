@@ -149,7 +149,7 @@ public class ChargingStation {
 			final Inventory theInv;
 			if (m == null) {
 				theInv = ((Dispenser) this.baseLocation.toBukkit().getBlock().getState()).getInventory();
-				for (final ItemStack is : inv) {
+				for (final ItemStack is : theInv) {
 					if (is != null && fuelPower.containsKey(is.getType())) {
 						m = is.getType();
 						break;
